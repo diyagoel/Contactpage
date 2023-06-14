@@ -1,21 +1,14 @@
 import React from "react";
+import ContactCard1 from "./ContactCard1";
 
 const ContactList1=(props)=>{
-    console.log(props);
-    const renderContactList = props.contacts.map((contact)=>{
+    const renderContactList1 = props.contacts.map((contact)=>{
         return(
-            <div className="item">
-                <div className="content">
-                    <div className="header">{contact.name}</div>
-                    <div>{contact.email}</div>
-                </div>
-                <i className="trash alternate outline icon"></i>
-            </div>
+            <ContactCard1 contact={contact}></ContactCard1>
         );
-    })
-    return(
-        <div className="ui celled list">{renderContactList}</div>
-    )
-}
+    });
+
+    return <div className="ui celled list">{renderContactList1}</div>  
+};
 
 export default ContactList1
